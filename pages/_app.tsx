@@ -34,7 +34,7 @@ const components = {
 
 const theme = extendTheme({ colors, components })
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
   return (
     <ChakraProvider theme={theme}>
       <Component {...pageProps} />

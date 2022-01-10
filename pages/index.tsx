@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Button, Container, Flex, Spacer } from '@chakra-ui/react'
+import Carousel from '../components/carousel'
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
           LOGO
           <Spacer />
           <Button variant="primary">Button</Button>
+          <Carousel />
         </Flex>
       </Container>
 
