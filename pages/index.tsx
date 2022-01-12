@@ -1,10 +1,10 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import { Button, Container, Flex, Spacer } from "@chakra-ui/react";
-import NavBar from "../components/navBar";
-import Hero from "../components/hero";
-import Carousel from "../components/carousel";
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import Image from 'next/image'
+import { Button, Container, Flex, Spacer } from '@chakra-ui/react'
+import NavBar from '../components/navBar'
+import Hero from '../components/hero'
+import Carousel from '../components/carousel'
 
 const Home: NextPage = () => {
   return (
@@ -19,13 +19,13 @@ const Home: NextPage = () => {
         <Hero
           title="Grasshoppers Academy Content Studio"
           description="Grasshoppers Academy Content Studio (GACS) is an initiative that allows students to build (partial) dynamic websites for real clients."
-          cta={{ label: "Documentation", href: "documentation" }}
-          image="ontwikkelen-jstack.jpg"
+          cta={{ label: 'Documentation', href: 'documentation' }}
+          image={{ src: 'ontwikkelen-jstack.jpg', alt: 'ontwikkelen jstack' }}
         />
         <Carousel />
       </Container>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
