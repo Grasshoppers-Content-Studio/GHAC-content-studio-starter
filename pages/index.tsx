@@ -1,12 +1,27 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import { Button, Container, Flex, Spacer } from '@chakra-ui/react'
-import NavBar from '../components/navBar'
-import Hero from '../components/hero'
-import Carousel from '../components/carousel'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import { Button, Container, Flex, Spacer } from "@chakra-ui/react";
+import NavBar from "../sections/navBar";
+import Hero from "../sections/hero";
+import Carousel from "../sections/carousel";
+import { getEntries } from "../services/contentful";
 
-const Home: NextPage = () => {
+export async function getStaticProps({}) {
+  const post = await getEntries({
+    content_type: "carousel",
+    include: 10,
+  });
+
+  return {
+    props: {
+      landscapeCarousel: post.items[0].fields,
+    },
+  };
+}
+
+const Home: NextPage = ({ landscapeCarousel }: { landscapeCarousel: any }) => {
+  console.log("DATA: ", landscapeCarousel);
   return (
     <div>
       <Head>
@@ -19,13 +34,17 @@ const Home: NextPage = () => {
         <Hero
           title="Grasshoppers Academy Content Studio"
           description="Grasshoppers Academy Content Studio (GACS) is an initiative that allows students to build (partial) dynamic websites for real clients."
-          cta={{ label: 'Documentation', href: 'documentation' }}
-          image={{ src: 'ontwikkelen-jstack.jpg', alt: 'ontwikkelen jstack' }}
+          cta={{ label: "Documentation", href: "documentation" }}
+          image={{ src: "ontwikkelen-jstack.jpg", alt: "ontwikkelen jstack" }}
         />
-        <Carousel />
+        <Carousel
+          title={landscapeCarousel.title}
+          description={landscapeCarousel.description}
+          images={landscapeCarousel.images}
+        />
       </Container>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
