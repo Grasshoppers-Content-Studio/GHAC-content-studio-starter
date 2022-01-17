@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { Button, Container, Flex, Spacer } from "@chakra-ui/react";
+import { Box, Container, Flex, Spacer } from "@chakra-ui/react";
 import NavBar from "../sections/navBar";
 import Hero from "../sections/hero";
 import Carousel from "../sections/carousel";
@@ -30,7 +30,7 @@ const Home: NextPage = ({ landscapeCarousel }: { landscapeCarousel: any }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-      <Container>
+      <Container mb="9">
         <Hero
           title="Grasshoppers Academy Content Studio"
           description="Grasshoppers Academy Content Studio (GACS) is an initiative that allows students to build (partial) dynamic websites for real clients."
@@ -42,6 +42,7 @@ const Home: NextPage = ({ landscapeCarousel }: { landscapeCarousel: any }) => {
           description={landscapeCarousel.description}
           images={landscapeCarousel.images}
         />
+        <Box my="16" />
       </Container>
     </div>
   );

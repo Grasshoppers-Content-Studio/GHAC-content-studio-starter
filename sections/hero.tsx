@@ -13,7 +13,7 @@ import {
   createIcon,
   IconProps,
   useColorModeValue,
-} from '@chakra-ui/react'
+} from "@chakra-ui/react";
 
 export default function Hero({
   title,
@@ -21,44 +21,38 @@ export default function Hero({
   cta,
   image,
 }: {
-  title: string
-  description: string
-  cta: any
-  image: any
+  title: string;
+  description: string;
+  cta: any;
+  image: any;
 }) {
   return (
-    <Container maxW={'7xl'}>
+    <Container maxW={"7xl"}>
       <Stack
-        align={'center'}
+        align={"center"}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 20, md: 28 }}
-        direction={{ base: 'column', md: 'row' }}
+        direction={{ base: "column", md: "row" }}
       >
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-          <Heading
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={{ base: '2xl', sm: '3xl', lg: '5xl' }}
-          >
+          <Heading variant="big">
             <br />
-            <Text as={'span'} color={'#002C3A'}>
-              {title}
-            </Text>
+            {title}
           </Heading>
-          <Text color={'gray.500'}>{description}</Text>
+          <Text>{description}</Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}
-            direction={{ base: 'column', sm: 'row' }}
+            direction={{ base: "column", sm: "row" }}
           >
             <Link href={cta.href}>
               <Button
-                rounded={'full'}
-                size={'lg'}
-                fontWeight={'normal'}
+                rounded={"full"}
+                size={"lg"}
+                fontWeight={"normal"}
                 px={6}
-                bg={'primary.600'}
+                bg={"primary.600"}
                 color="white"
-                _hover={{ bg: 'primary.400' }}
+                _hover={{ bg: "primary.400" }}
               >
                 {cta.label}
               </Button>
@@ -67,47 +61,47 @@ export default function Hero({
         </Stack>
         <Flex
           flex={1}
-          justify={'center'}
-          align={'center'}
-          position={'relative'}
-          w={'full'}
+          justify={"center"}
+          align={"center"}
+          position={"relative"}
+          w={"full"}
         >
           <Blob
-            w={'150%'}
-            h={'150%'}
-            position={'absolute'}
-            top={'-20%'}
+            w={"150%"}
+            h={"150%"}
+            position={"absolute"}
+            top={"-20%"}
             left={0}
             zIndex={-1}
-            color={'secondary.100'}
+            color={"secondary.100"}
           />
           <Box
-            position={'relative'}
-            height={'300px'}
-            rounded={'2xl'}
-            boxShadow={'2xl'}
-            width={'full'}
-            overflow={'hidden'}
+            position={"relative"}
+            height={"300px"}
+            rounded={"2xl"}
+            boxShadow={"2xl"}
+            width={"full"}
+            overflow={"hidden"}
           >
             <Image
               alt={image.alt}
-              fit={'cover'}
-              align={'center'}
-              w={'100%'}
-              h={'100%'}
+              fit={"cover"}
+              align={"center"}
+              w={"100%"}
+              h={"100%"}
               src={image.src}
             />
           </Box>
         </Flex>
       </Stack>
     </Container>
-  )
+  );
 }
 
 export const Blob = (props: IconProps) => {
   return (
     <Icon
-      width={'100%'}
+      width={"100%"}
       viewBox="0 0 578 440"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -120,5 +114,5 @@ export const Blob = (props: IconProps) => {
         fill="currentColor"
       />
     </Icon>
-  )
-}
+  );
+};

@@ -1,26 +1,17 @@
 import React, { useState } from "react";
-import theme from "../../../styles/theme";
 import { documentToReactComponents as renderRichText } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
-// import {invertColor} from '../services/colors';
+import { theme } from "../pages/_app";
 
 const RichText = ({ content }) => {
+  console.log("CONTENT: ", content, theme);
   const checkTypeId = (node, id) =>
     node?.data?.target?.sys?.contentType?.sys?.id === id;
 
-  const inputStyle = () => (
-    <style jsx>{`
-      .input {
-        width: 100%;
-        border: 1px solid lightgrey;
-        padding: 10px;
-        border-radius: 4px;
-      }
-    `}</style>
-  );
-
   const renderOptions = {
     renderNode: {
+      [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
+
       [BLOCKS.EMBEDDED_ENTRY]: (node) => {
         // Custom code for entries
       },
@@ -45,7 +36,7 @@ const RichText = ({ content }) => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex richText">
       {renderRichText(content, renderOptions)}
 
       <style jsx>{`
@@ -57,6 +48,9 @@ const RichText = ({ content }) => {
         }
         .flex {
           flex: 1;
+        }
+        .richText {
+          color: ${theme.colors.gray[500]};
         }
       `}</style>
     </div>
