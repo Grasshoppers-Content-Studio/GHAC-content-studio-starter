@@ -5,13 +5,13 @@ export const Heading = {
   sizes: {},
   variants: {
     small: {
-      fontSize: "4xl",
+      fontSize: ["2xl", null, "3xl"],
       lineHeight: 1.1,
       fontWeight: 600,
       marginBottom: "2",
     },
     medium: {
-      fontSize: ["3xl", null, "5xl"],
+      fontSize: ["3xl", null, "4xl"],
       lineHeight: 1.1,
       fontWeight: 600,
       marginBottom: "2",
