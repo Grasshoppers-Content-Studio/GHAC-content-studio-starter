@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { documentToReactComponents as renderRichText } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
 import { theme } from "../pages/_app";
+import { customVariables } from "../styles/customVariables";
 
 const RichText = ({ content }) => {
-  console.log("CONTENT: ", content, theme);
   const checkTypeId = (node, id) =>
     node?.data?.target?.sys?.contentType?.sys?.id === id;
 
@@ -50,7 +50,7 @@ const RichText = ({ content }) => {
           flex: 1;
         }
         .richText {
-          color: ${theme.colors.gray[500]};
+          color: ${customVariables.colors.content};
         }
       `}</style>
     </div>
