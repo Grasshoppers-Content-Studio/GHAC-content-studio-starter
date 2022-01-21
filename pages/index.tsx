@@ -20,7 +20,7 @@ export async function getStaticProps({}) {
   };
 }
 
-const Home: NextPage = ({ landscapeCarousel }: { landscapeCarousel: any }) => {
+const Home = ({ landscapeCarousel }: { landscapeCarousel: any }) => {
   return (
     <div>
       <Head>

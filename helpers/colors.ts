@@ -1,5 +1,7 @@
 import { theme } from "../pages/_app";
 
+// This is needed when we use theme values in non-chakra components 
+// like those from external libraries
 export const themeValueToHex = (val: any) => {
   return objByString(theme.colors, val);
 };
