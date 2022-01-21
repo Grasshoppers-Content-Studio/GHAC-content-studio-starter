@@ -1,8 +1,13 @@
-
+// START PRESETS \\
+const primary = "primary.500";
+const primaryHover = "primary.400";
+const neutral = "gray.600";
+const neutralHover = "gray.800";
+// END PRESETS \\
 
 export const Link = {
   baseStyle: {
-    fontWeight: 500
+    fontWeight: 500,
   },
   sizes: {
     sm: {},
@@ -11,15 +16,21 @@ export const Link = {
   },
   variants: {
     regular: {
-      color: "primary.500",
+      color: primary,
       _hover: {
-        color: "primary.400",
+        color: primaryHover,
       },
     },
     gray: {
-      color: "gray.600",
+      color: neutral,
       _hover: {
-        color: "gray.800",
+        color: neutralHover,
+        textDecoration: "none",
+      },
+    },
+    headless: {
+      textDecoration: "none",
+      _hover: {
         textDecoration: "none",
       },
     },

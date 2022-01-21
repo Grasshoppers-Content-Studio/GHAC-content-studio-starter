@@ -21,7 +21,6 @@ export async function getStaticProps({}) {
 }
 
 const Home: NextPage = ({ landscapeCarousel }: { landscapeCarousel: any }) => {
-  console.log("DATA: ", landscapeCarousel);
   return (
     <div>
       <Head>

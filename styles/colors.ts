@@ -1,4 +1,4 @@
-export const colors = {
+const abstract = {
   primary: {
     100: "#ecfef2",
     200: "#c5fdd9",
@@ -19,6 +19,15 @@ export const colors = {
     600: "#5461b3",
     700: "#303866",
     800: "#181c33",
-    900: "#0c0e19",
+    900: "#002C3A",
   },
+}
+
+const specific = {
+  content: 'gray.500'
+}
+
+export const colors = {
+  ...abstract,
+  ...specific
 };

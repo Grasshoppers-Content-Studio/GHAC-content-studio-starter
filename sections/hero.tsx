@@ -44,16 +44,8 @@ export default function Hero({
             spacing={{ base: 4, sm: 6 }}
             direction={{ base: "column", sm: "row" }}
           >
-            <Link href={cta.href}>
-              <Button
-                rounded={"full"}
-                size={"lg"}
-                fontWeight={"normal"}
-                px={6}
-                bg={"primary.600"}
-                color="white"
-                _hover={{ bg: "primary.400" }}
-              >
+            <Link href={cta.href} variant="headless">
+              <Button variant="primary" size="lg">
                 {cta.label}
               </Button>
             </Link>

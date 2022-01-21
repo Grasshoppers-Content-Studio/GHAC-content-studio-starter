@@ -1,4 +1,5 @@
 import { colors } from "./colors";
+import { radii } from "./radii";
 
 import { Text } from "./components/text";
 import { Link } from "./components/link";
@@ -9,6 +10,7 @@ import { Container } from "./components/container";
 
 export const themeStyles = {
   colors,
+  radii,
   components: {
     Text,
     Link,

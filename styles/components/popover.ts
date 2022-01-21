@@ -1,3 +1,8 @@
+// START PRESETS \\
+const bgColor = "white";
+// END PRESETS \\
+
+
 export const Popover = {
   baseStyle: {},
   sizes: {
@@ -9,7 +14,7 @@ export const Popover = {
     regular: {
       border: 0,
       boxShadow: "xl",
-      bg: "white",
+      bg: bgColor,
       p: 4,
       rounded: "xl",
       minW: "sm",

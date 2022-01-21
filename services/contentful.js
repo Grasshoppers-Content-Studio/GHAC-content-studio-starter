@@ -17,7 +17,7 @@ export const getClient = async () => {
 };
 
 export const getEntries = async (obj) => {
-  console.log('fetching entries: ', obj)
+  // console.log('fetching entries: ', obj)
   const c = await getClient();
   return c.getEntries(obj);
 };

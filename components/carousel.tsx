@@ -23,7 +23,6 @@ export default function Carousel({ images }: { images: any }) {
       </RRCarousel>
       <style global jsx>{`
         .carousel {
-          
           border-radius: ${theme.radii.xl};
         }
       `}</style>

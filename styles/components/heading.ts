@@ -1,6 +1,10 @@
+// START PRESETS \\
+const color = "gray.700";
+// END PRESETS \\
+
 export const Heading = {
   baseStyle: {
-    color: "gray.700",
+    color: color,
   },
   sizes: {},
   variants: {

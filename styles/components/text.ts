@@ -1,6 +1,10 @@
+// START PRESETS \\
+const color = "gray.500";
+// END PRESETS \\
+
 export const Text = {
   baseStyle: {
-    color: "gray.500",
+    color: color,
   },
   sizes: {},
   variants: {

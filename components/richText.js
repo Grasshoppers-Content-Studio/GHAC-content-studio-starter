@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { documentToReactComponents as renderRichText } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
 import { theme } from "../pages/_app";
-import { customVariables } from "../styles/customVariables";
+import { themeValueToHex } from "../helpers/colors";
 
 const RichText = ({ content }) => {
   const checkTypeId = (node, id) =>
@@ -50,7 +50,7 @@ const RichText = ({ content }) => {
           flex: 1;
         }
         .richText {
-          color: ${customVariables.colors.content};
+          color: ${themeValueToHex(theme.colors.content)};
         }
       `}</style>
     </div>
