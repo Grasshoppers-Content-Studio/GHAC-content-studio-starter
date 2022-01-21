@@ -16,7 +16,7 @@ export default function CarouselSection({
 }) {
   return (
     <Container maxW={"7xl"}>
-      <Box mb="2">
+      <Box mb="4">
         <Heading>{title}</Heading>
         <RichText content={description} />
       </Box>

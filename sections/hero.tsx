@@ -9,10 +9,7 @@ import {
   Image,
   Icon,
   Link,
-  IconButton,
-  createIcon,
   IconProps,
-  useColorModeValue,
 } from "@chakra-ui/react";
 
 export default function Hero({

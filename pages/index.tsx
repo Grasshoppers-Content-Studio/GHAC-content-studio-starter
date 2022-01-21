@@ -20,6 +20,14 @@ export async function getStaticProps({}) {
   };
 }
 
+const heroContent = {
+  title: "Grasshoppers Content Studio",
+  description:
+    "Grasshoppers Academy Content Studio (GACS) is an initiative that allows students to build (partial) dynamic websites for real clients.",
+  cta: { label: "Documentation", href: "documentation" },
+  image: { src: "ontwikkelen-jstack.jpg", alt: "ontwikkelen jstack" },
+};
+
 const Home = ({ landscapeCarousel }: { landscapeCarousel: any }) => {
   return (
     <div>
@@ -31,10 +39,10 @@ const Home = ({ landscapeCarousel }: { landscapeCarousel: any }) => {
       <NavBar />
       <Container mb="9">
         <Hero
-          title="Grasshoppers Academy Content Studio"
-          description="Grasshoppers Academy Content Studio (GACS) is an initiative that allows students to build (partial) dynamic websites for real clients."
-          cta={{ label: "Documentation", href: "documentation" }}
-          image={{ src: "ontwikkelen-jstack.jpg", alt: "ontwikkelen jstack" }}
+          title={heroContent.title}
+          description={heroContent.description}
+          cta={heroContent.cta}
+          image={heroContent.image}
         />
         <Carousel
           title={landscapeCarousel.title}

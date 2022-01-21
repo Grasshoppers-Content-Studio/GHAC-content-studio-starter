@@ -15,13 +15,13 @@ export const Heading = {
       marginBottom: "2",
     },
     medium: {
-      fontSize: ["3xl", null, "4xl"],
+      fontSize: ["4xl", null, "5xl"],
       lineHeight: 1.1,
       fontWeight: 600,
-      marginBottom: "2",
+      marginBottom: "5",
     },
     big: {
-      fontSize: ["4xl", null, "5xl"],
+      fontSize: ["5xl", null, "6xl"],
       lineHeight: 1.1,
       fontWeight: 600,
       marginBottom: "5",
