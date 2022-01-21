@@ -1,6 +1,8 @@
+import { mode, Modes } from "../presets";
+
 // START PRESETS \\
 const primaryBg = "primary.500";
-const primaryFront = "secondary.900";
+const primaryFront = mode === Modes.PLAYFUL ? "secondary.900" : "white";
 const primaryBgHover = "primary.600";
 
 const linkFront = "primary.500";

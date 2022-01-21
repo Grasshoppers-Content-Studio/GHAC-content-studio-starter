@@ -9,11 +9,10 @@ import {
   Image,
   Icon,
   Link,
-  IconButton,
-  createIcon,
   IconProps,
-  useColorModeValue,
 } from "@chakra-ui/react";
+
+import { Modes, mode } from "../styles/presets";
 
 export default function Hero({
   title,
@@ -58,15 +57,17 @@ export default function Hero({
           position={"relative"}
           w={"full"}
         >
-          <Blob
-            w={"150%"}
-            h={"150%"}
-            position={"absolute"}
-            top={"-20%"}
-            left={0}
-            zIndex={-1}
-            color={"secondary.100"}
-          />
+          {mode !== Modes.PROFESSIONAL && (
+            <Blob
+              w={"150%"}
+              h={"150%"}
+              position={"absolute"}
+              top={"-20%"}
+              left={0}
+              zIndex={-1}
+              color={"secondary.100"}
+            />
+          )}
           <Box
             position={"relative"}
             height={"300px"}
