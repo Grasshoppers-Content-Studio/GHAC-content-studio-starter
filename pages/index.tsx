@@ -5,6 +5,7 @@ import { Box, Container, Flex, Spacer } from "@chakra-ui/react";
 import NavBar from "../sections/navBar";
 import Hero from "../sections/hero";
 import Carousel from "../sections/carousel";
+import ContactForm from "../sections/contactForm";
 import { getEntries } from "../services/contentful";
 
 export async function getStaticProps({}) {
@@ -37,7 +38,7 @@ const Home = ({ landscapeCarousel }: { landscapeCarousel: any }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-      <Container mb="9">
+      {/* <Container mb="9"> */}
         <Hero
           title={heroContent.title}
           description={heroContent.description}
@@ -49,8 +50,9 @@ const Home = ({ landscapeCarousel }: { landscapeCarousel: any }) => {
           description={landscapeCarousel.description}
           images={landscapeCarousel.images}
         />
+        <ContactForm />
         <Box my="16" />
-      </Container>
+      {/* </Container> */}
     </div>
   );
 };
