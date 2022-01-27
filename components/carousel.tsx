@@ -16,7 +16,13 @@ export default function Carousel({ images }: { images: any }) {
 
   return (
     <>
-      <RRCarousel infiniteLoop autoPlay showThumbs={false} showStatus={false} interval={5000}>
+      <RRCarousel
+        infiniteLoop
+        autoPlay
+        showThumbs={false}
+        showStatus={false}
+        interval={5000}
+      >
         {imageObjects.map((image: any, index: number) => (
           <img key={index} src={image.url} />
         ))}
@@ -24,6 +30,7 @@ export default function Carousel({ images }: { images: any }) {
       <style global jsx>{`
         .carousel {
           border-radius: ${theme.radii.xl};
+          box-shadow: ${theme.shadows["2xl"]};
         }
       `}</style>
     </>

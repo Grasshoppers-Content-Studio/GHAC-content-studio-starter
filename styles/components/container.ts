@@ -2,7 +2,7 @@ export const Container = {
   baseStyle: {},
   sizes: {
     md: {
-      maxWidth: "1280px",
+      maxWidth: "1140px",
     },
   },
   variants: {},
