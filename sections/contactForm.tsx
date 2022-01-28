@@ -146,7 +146,7 @@ export default function contact() {
                   width={{ sm: "100%", md: "100%", lg: "420px" }}
                 >
 
-<form action="/success" name="contact" method="POST" data-netlify="true">
+<form action="/" name="contact" method="POST" data-netlify="true">
   <p>
     <label>Your Name: <input type="text" name="name" /></label>   
   </p>
