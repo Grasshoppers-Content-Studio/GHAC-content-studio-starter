@@ -16,50 +16,50 @@ import {
   InputGroup,
   InputLeftElement,
   Textarea,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react'
 import {
   MdPhone,
   MdEmail,
   MdLocationOn,
   MdOutlineEmail,
   MdOutlineTopic,
-} from "react-icons/md";
-import { BsGithub, BsDiscord, BsPerson, BsFacebook } from "react-icons/bs";
-import { Icon } from "@chakra-ui/react";
-import NextLink from "next/link";
+} from 'react-icons/md'
+import { BsGithub, BsDiscord, BsPerson, BsFacebook } from 'react-icons/bs'
+import { Icon } from '@chakra-ui/react'
+import NextLink from 'next/link'
 
 const socials = [
   {
-    ariaLabel: "facebook",
-    url: "https://www.facebook.com/grasshoppersacademy",
+    ariaLabel: 'facebook',
+    url: 'https://www.facebook.com/grasshoppersacademy',
     icon: BsFacebook,
   },
   {
-    ariaLabel: "github",
-    url: "https://www.github.com",
+    ariaLabel: 'github',
+    url: 'https://www.github.com',
     icon: BsGithub,
   },
   {
-    ariaLabel: "discord",
-    url: "https://www.discord.com",
+    ariaLabel: 'discord',
+    url: 'https://www.discord.com',
     icon: BsDiscord,
   },
-];
+]
 
 const contacts = [
   {
-    value: "+32 (0)3 451 93 28",
+    value: '+32 (0)3 451 93 28',
     icon: MdPhone,
   },
   {
-    value: "info@grasshoppers-academy.eu",
+    value: 'info@grasshoppers-academy.eu',
     icon: MdEmail,
   },
   {
-    value: "Veldkant 33b 2550 Kontich",
+    value: 'Veldkant 33b 2550 Kontich',
     icon: MdLocationOn,
   },
-];
+]
 
 export default function contact() {
   return (
@@ -79,13 +79,13 @@ export default function contact() {
           <Box p={4}>
             <Wrap
               spacing={{ base: 20, sm: 3, md: 20, lg: 20 }}
-              justify={"center"}
+              justify={'center'}
             >
               <WrapItem>
                 <Box>
                   <Heading
                     color="primary.500"
-                    textAlign={{ base: "center", md: "left" }}
+                    textAlign={{ base: 'center', md: 'left' }}
                   >
                     Contact
                   </Heading>
@@ -131,7 +131,7 @@ export default function contact() {
                           aria-label={social.ariaLabel}
                           size="lg"
                           isRound={true}
-                          _hover={{ bg: "secondary.600" }}
+                          _hover={{ bg: 'secondary.600' }}
                           icon={<Icon as={social.icon} boxSize="28px" />}
                         />
                       </NextLink>
@@ -143,29 +143,43 @@ export default function contact() {
                 <Box
                   bg="white"
                   borderRadius="lg"
-                  width={{ sm: "100%", md: "100%", lg: "420px" }}
+                  width={{ sm: '100%', md: '100%', lg: '420px' }}
                 >
-
-<form action="/success" name="contact" method="POST" data-netlify="true">
-  <p>
-    <label>Your Name: <input type="text" name="name" /></label>   
-  </p>
-  <p>
-    <label>Your Email: <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label>Your Role: <select name="role[]" multiple>
-      <option value="leader">Leader</option>
-      <option value="follower">Follower</option>
-    </select></label>
-  </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
+                  <form
+                    action="/success"
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                  >
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p>
+                      <label>
+                        Your Name: <input type="text" name="name" />
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        Your Email: <input type="email" name="email" />
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        Your Role:{' '}
+                        <select name="role[]" multiple>
+                          <option value="leader">Leader</option>
+                          <option value="follower">Follower</option>
+                        </select>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        Message: <textarea name="message"></textarea>
+                      </label>
+                    </p>
+                    <p>
+                      <button type="submit">Send</button>
+                    </p>
+                  </form>
                   {/* <Box m={8} color="#0B0E3F">
                     <form name="contact" method="POST" data-netlify="true">
                       <VStack spacing={5}>
@@ -224,5 +238,5 @@ export default function contact() {
         </Box>
       </Flex>
     </Container>
-  );
+  )
 }
