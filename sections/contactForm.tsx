@@ -146,53 +146,55 @@ export default function contact() {
                   width={{ sm: "100%", md: "100%", lg: "420px" }}
                 >
                   <Box m={8} color="#0B0E3F">
-                    <VStack spacing={5}>
-                      <FormControl id="name">
-                        <FormLabel>Your Name</FormLabel>
-                        <InputGroup borderColor="#E0E1E7">
-                          <InputLeftElement
-                            pointerEvents="none"
-                            children={<BsPerson color="gray.800" />}
+                    <form name="contact" method="POST" data-netlify="true">
+                      <VStack spacing={5}>
+                        <FormControl id="name">
+                          <FormLabel>Your Name</FormLabel>
+                          <InputGroup borderColor="#E0E1E7">
+                            <InputLeftElement
+                              pointerEvents="none"
+                              children={<BsPerson color="gray.800" />}
+                            />
+                            <Input name="name" type="text" size="md" />
+                          </InputGroup>
+                        </FormControl>
+                        <FormControl id="name">
+                          <FormLabel>Mail</FormLabel>
+                          <InputGroup borderColor="#E0E1E7">
+                            <InputLeftElement
+                              pointerEvents="none"
+                              children={<MdOutlineEmail color="gray.800" />}
+                            />
+                            <Input type="text" size="md" />
+                          </InputGroup>
+                        </FormControl>
+                        <FormControl id="topic">
+                          <FormLabel>Topic</FormLabel>
+                          <InputGroup borderColor="#E0E1E7">
+                            <InputLeftElement
+                              pointerEvents="none"
+                              children={<MdOutlineTopic color="gray.800" />}
+                            />
+                            <Input type="text" size="md" />
+                          </InputGroup>
+                        </FormControl>
+                        <FormControl id="name">
+                          <FormLabel>Message</FormLabel>
+                          <Textarea
+                            borderColor="gray.300"
+                            _hover={{
+                              borderRadius: "gray.300",
+                            }}
+                            placeholder="message"
                           />
-                          <Input type="text" size="md" />
-                        </InputGroup>
-                      </FormControl>
-                      <FormControl id="name">
-                        <FormLabel>Mail</FormLabel>
-                        <InputGroup borderColor="#E0E1E7">
-                          <InputLeftElement
-                            pointerEvents="none"
-                            children={<MdOutlineEmail color="gray.800" />}
-                          />
-                          <Input type="text" size="md" />
-                        </InputGroup>
-                      </FormControl>
-                      <FormControl id="topic">
-                        <FormLabel>Topic</FormLabel>
-                        <InputGroup borderColor="#E0E1E7">
-                          <InputLeftElement
-                            pointerEvents="none"
-                            children={<MdOutlineTopic color="gray.800" />}
-                          />
-                          <Input type="text" size="md" />
-                        </InputGroup>
-                      </FormControl>
-                      <FormControl id="name">
-                        <FormLabel>Message</FormLabel>
-                        <Textarea
-                          borderColor="gray.300"
-                          _hover={{
-                            borderRadius: "gray.300",
-                          }}
-                          placeholder="message"
-                        />
-                      </FormControl>
-                      <FormControl id="name">
-                        <Button float="right" variant="primary">
-                          Send Message
-                        </Button>
-                      </FormControl>
-                    </VStack>
+                        </FormControl>
+                        <FormControl id="name">
+                          <Button type="submit" float="right" variant="primary">
+                            Send Message
+                          </Button>
+                        </FormControl>
+                      </VStack>
+                    </form>
                   </Box>
                 </Box>
               </WrapItem>
