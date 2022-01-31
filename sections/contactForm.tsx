@@ -63,9 +63,10 @@ const contacts = [
 
 export default function contact() {
   return (
-    <Container mt="10" centerContent overflow="hidden">
+    <Container  mt="10" centerContent overflow="hidden">
       <Flex w="100%">
         <Box
+        boxShadow={"xl"}
           display="flex"
           justifyContent="center"
           flex="1"
@@ -145,42 +146,7 @@ export default function contact() {
                   borderRadius="lg"
                   width={{ sm: "100%", md: "100%", lg: "420px" }}
                 >
-                  {/* <form
-                    action="/success"
-                    name="contact"
-                    method="POST"
-                    data-netlify="true"
-                  >
-                    <input type="hidden" name="form-name" value="contact" />
-                    <p>
-                      <label>
-                        Your Name: <input type="text" name="name" />
-                      </label>
-                    </p>
-                    <p>
-                      <label>
-                        Your Email: <input type="email" name="email" />
-                      </label>
-                    </p>
-                    <p>
-                      <label>
-                        Your Role:{' '}
-                        <select name="role[]" multiple>
-                          <option value="leader">Leader</option>
-                          <option value="follower">Follower</option>
-                        </select>
-                      </label>
-                    </p>
-                    <p>
-                      <label>
-                        Message: <textarea name="message"></textarea>
-                      </label>
-                    </p>
-                    <p>
-                      <button type="submit">Send</button>
-                    </p>
-                  </form> */}
-                  <Box m={8} color="#0B0E3F">
+                  <Box m={8} color="secondary.800">
                     <form
                       action="/success"
                       name="contact"
@@ -206,7 +172,7 @@ export default function contact() {
                               pointerEvents="none"
                               children={<MdOutlineEmail color="gray.800" />}
                             />
-                            <Input type="text" size="md" />
+                            <Input name="mail" type="text" size="md" />
                           </InputGroup>
                         </FormControl>
                         <FormControl id="topic">
@@ -216,12 +182,13 @@ export default function contact() {
                               pointerEvents="none"
                               children={<MdOutlineTopic color="gray.800" />}
                             />
-                            <Input type="text" size="md" />
+                            <Input name="topic" type="text" size="md" />
                           </InputGroup>
                         </FormControl>
                         <FormControl id="name">
                           <FormLabel>Message</FormLabel>
                           <Textarea
+                            name="message"
                             borderColor="gray.300"
                             _hover={{
                               borderRadius: "gray.300",

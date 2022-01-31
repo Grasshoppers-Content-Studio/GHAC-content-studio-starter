@@ -30,7 +30,7 @@ export default function Carousel({ images }: { images: any }) {
       <style global jsx>{`
         .carousel {
           border-radius: ${theme.radii.xl};
-          box-shadow: ${theme.shadows["2xl"]};
+          box-shadow: ${theme.shadows["xl"]};
         }
       `}</style>
     </>
