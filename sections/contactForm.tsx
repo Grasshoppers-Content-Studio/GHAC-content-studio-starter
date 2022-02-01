@@ -159,7 +159,7 @@ export default function contact() {
                       <input type="hidden" name="form-name" value="contact" />
                       <VStack spacing={5}>
                         <FormControl id="name">
-                          <FormLabel>Your Name</FormLabel>
+                          <FormLabel>Your Name?</FormLabel>
                           <InputGroup borderColor="#E0E1E7">
                             <InputLeftElement
                               pointerEvents="none"
