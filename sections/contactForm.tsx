@@ -159,7 +159,7 @@ export default function contact() {
                       <input type="hidden" name="form-name" value="contact" />
                       <VStack spacing={5}>
                         <FormControl id="name">
-                          <FormLabel>Your Name?</FormLabel>
+                          <FormLabel>Your Name</FormLabel>
                           <InputGroup borderColor="#E0E1E7">
                             <InputLeftElement
                               pointerEvents="none"
@@ -168,7 +168,7 @@ export default function contact() {
                             <Input name="name" type="text" size="md" required />
                           </InputGroup>
                         </FormControl>
-                        <FormControl id="name">
+                        <FormControl id="mail">
                           <FormLabel>Mail</FormLabel>
                           <InputGroup borderColor="#E0E1E7">
                             <InputLeftElement
@@ -195,7 +195,7 @@ export default function contact() {
                             <Input name="topic" type="text" size="md" />
                           </InputGroup>
                         </FormControl>
-                        <FormControl id="name">
+                        <FormControl id="message">
                           <FormLabel>Message</FormLabel>
                           <Textarea
                             name="message"
