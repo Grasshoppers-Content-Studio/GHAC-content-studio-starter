@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   Container,
   Flex,
@@ -62,11 +63,13 @@ const contacts = [
 ];
 
 export default function contact() {
+  const [email, setEmail] = useState("");
+
   return (
-    <Container  mt="10" centerContent overflow="hidden">
+    <Container mt="10" centerContent overflow="hidden">
       <Flex w="100%">
         <Box
-        boxShadow={"xl"}
+          boxShadow={"xl"}
           display="flex"
           justifyContent="center"
           flex="1"
@@ -162,7 +165,7 @@ export default function contact() {
                               pointerEvents="none"
                               children={<BsPerson color="gray.800" />}
                             />
-                            <Input name="name" type="text" size="md" />
+                            <Input name="name" type="text" size="md" required />
                           </InputGroup>
                         </FormControl>
                         <FormControl id="name">
@@ -172,7 +175,14 @@ export default function contact() {
                               pointerEvents="none"
                               children={<MdOutlineEmail color="gray.800" />}
                             />
-                            <Input name="mail" type="text" size="md" />
+                            <Input
+                              name="email"
+                              type="email"
+                              value={email}
+                              onChange={(e) => setEmail(e.target.value)}
+                              size="md"
+                              required
+                            />
                           </InputGroup>
                         </FormControl>
                         <FormControl id="topic">
@@ -194,6 +204,7 @@ export default function contact() {
                               borderRadius: "gray.300",
                             }}
                             placeholder="message"
+                            required
                           />
                         </FormControl>
                         <FormControl id="name">
