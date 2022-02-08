@@ -1,39 +1,13 @@
 import {
   Container,
-  Flex,
   Box,
   Heading,
   Text,
-  IconButton,
-  Button,
-  VStack,
-  HStack,
-  Wrap,
-  WrapItem,
-  FormControl,
-  FormLabel,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  Textarea,
-  useToast,
   Stack,
   Link,
 } from "@chakra-ui/react";
 import Head from "next/head";
-
-import {
-  MdPhone,
-  MdEmail,
-  MdLocationOn,
-  MdOutlineEmail,
-  MdOutlineTopic,
-} from "react-icons/md";
 import NavBar from "../sections/navBar";
-
-import { BsGithub, BsDiscord, BsPerson, BsFacebook } from "react-icons/bs";
-import { Icon } from "@chakra-ui/react";
-import NextLink from "next/link";
 
 const Success = ({ landscapeCarousel }: { landscapeCarousel: any }) => {
   return (

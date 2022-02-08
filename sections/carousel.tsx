@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Box, useBreakpointValue } from "@chakra-ui/react";
+import { Container, Box } from "@chakra-ui/react";
 import { Heading } from "@chakra-ui/react";
 
 import RichText from "../components/richText";

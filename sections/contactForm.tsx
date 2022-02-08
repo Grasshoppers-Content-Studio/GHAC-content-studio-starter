@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import {
   Container,
   Flex,
@@ -17,59 +17,59 @@ import {
   InputGroup,
   InputLeftElement,
   Textarea,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react'
 import {
   MdPhone,
   MdEmail,
   MdLocationOn,
   MdOutlineEmail,
   MdOutlineTopic,
-} from "react-icons/md";
-import { BsGithub, BsDiscord, BsPerson, BsFacebook } from "react-icons/bs";
-import { Icon } from "@chakra-ui/react";
-import NextLink from "next/link";
+} from 'react-icons/md'
+import { BsGithub, BsDiscord, BsPerson, BsFacebook } from 'react-icons/bs'
+import { Icon } from '@chakra-ui/react'
+import NextLink from 'next/link'
 
 const socials = [
   {
-    ariaLabel: "facebook",
-    url: "https://www.facebook.com/grasshoppersacademy",
+    ariaLabel: 'facebook',
+    url: 'https://www.facebook.com/grasshoppersacademy',
     icon: BsFacebook,
   },
   {
-    ariaLabel: "github",
-    url: "https://www.github.com",
+    ariaLabel: 'github',
+    url: 'https://www.github.com',
     icon: BsGithub,
   },
   {
-    ariaLabel: "discord",
-    url: "https://www.discord.com",
+    ariaLabel: 'discord',
+    url: 'https://www.discord.com',
     icon: BsDiscord,
   },
-];
+]
 
 const contacts = [
   {
-    value: "+32 (0)3 451 93 28",
+    value: '+32 (0)3 451 93 28',
     icon: MdPhone,
   },
   {
-    value: "info@grasshoppers-academy.eu",
+    value: 'info@grasshoppers-academy.eu',
     icon: MdEmail,
   },
   {
-    value: "Veldkant 33b 2550 Kontich",
+    value: 'Veldkant 33b 2550 Kontich',
     icon: MdLocationOn,
   },
-];
+]
 
 export default function contact() {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('')
 
   return (
     <Container mt="10" centerContent overflow="hidden">
       <Flex w="100%">
         <Box
-          boxShadow={"xl"}
+          boxShadow={'xl'}
           display="flex"
           justifyContent="center"
           flex="1"
@@ -83,13 +83,13 @@ export default function contact() {
           <Box p={4}>
             <Wrap
               spacing={{ base: 20, sm: 3, md: 20, lg: 20 }}
-              justify={"center"}
+              justify={'center'}
             >
               <WrapItem>
                 <Box>
                   <Heading
                     color="primary.500"
-                    textAlign={{ base: "center", md: "left" }}
+                    textAlign={{ base: 'center', md: 'left' }}
                   >
                     Contact
                   </Heading>
@@ -135,7 +135,7 @@ export default function contact() {
                           aria-label={social.ariaLabel}
                           size="lg"
                           isRound={true}
-                          _hover={{ bg: "secondary.600" }}
+                          _hover={{ bg: 'secondary.600' }}
                           icon={<Icon as={social.icon} boxSize="28px" />}
                         />
                       </NextLink>
@@ -147,7 +147,7 @@ export default function contact() {
                 <Box
                   bg="white"
                   borderRadius="lg"
-                  width={{ sm: "100%", md: "100%", lg: "420px" }}
+                  width={{ sm: '100%', md: '100%', lg: '420px' }}
                 >
                   <Box m={8} color="secondary.800">
                     <form
@@ -160,21 +160,19 @@ export default function contact() {
                       <VStack spacing={5}>
                         <FormControl id="name">
                           <FormLabel>Your Name</FormLabel>
-                          <InputGroup borderColor="#E0E1E7">
-                            <InputLeftElement
-                              pointerEvents="none"
-                              children={<BsPerson color="gray.800" />}
-                            />
+                          <InputGroup borderColor="gray.200">
+                            <InputLeftElement pointerEvents="none">
+                              <BsPerson color="gray.800" />
+                            </InputLeftElement>
                             <Input name="name" type="text" size="md" required />
                           </InputGroup>
                         </FormControl>
                         <FormControl id="mail">
                           <FormLabel>Mail</FormLabel>
-                          <InputGroup borderColor="#E0E1E7">
-                            <InputLeftElement
-                              pointerEvents="none"
-                              children={<MdOutlineEmail color="gray.800" />}
-                            />
+                          <InputGroup borderColor="gray.200">
+                            <InputLeftElement pointerEvents="none">
+                              <MdOutlineEmail color="gray.800" />
+                            </InputLeftElement>
                             <Input
                               name="email"
                               type="email"
@@ -187,11 +185,10 @@ export default function contact() {
                         </FormControl>
                         <FormControl id="topic">
                           <FormLabel>Topic</FormLabel>
-                          <InputGroup borderColor="#E0E1E7">
-                            <InputLeftElement
-                              pointerEvents="none"
-                              children={<MdOutlineTopic color="gray.800" />}
-                            />
+                          <InputGroup borderColor="gray.200">
+                            <InputLeftElement pointerEvents="none">
+                              <MdOutlineTopic color="gray.800" />
+                            </InputLeftElement>
                             <Input name="topic" type="text" size="md" />
                           </InputGroup>
                         </FormControl>
@@ -199,10 +196,7 @@ export default function contact() {
                           <FormLabel>Message</FormLabel>
                           <Textarea
                             name="message"
-                            borderColor="gray.300"
-                            _hover={{
-                              borderRadius: "gray.300",
-                            }}
+                            borderColor="gray.200"
                             placeholder="message"
                             required
                           />
@@ -222,5 +216,5 @@ export default function contact() {
         </Box>
       </Flex>
     </Container>
-  );
+  )
 }

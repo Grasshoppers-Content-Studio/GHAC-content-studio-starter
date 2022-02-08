@@ -1,33 +1,32 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import { Box, Container, Flex, Spacer } from "@chakra-ui/react";
-import NavBar from "../sections/navBar";
-import Hero from "../sections/hero";
-import Carousel from "../sections/carousel";
-import ContactForm from "../sections/contactForm";
-import { getEntries } from "../services/contentful";
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import { Box } from '@chakra-ui/react'
+import NavBar from '../sections/navBar'
+import Hero from '../sections/hero'
+import Carousel from '../sections/carousel'
+import ContactForm from '../sections/contactForm'
+import { getEntries } from '../services/contentful'
 
 export async function getStaticProps({}) {
   const post = await getEntries({
-    content_type: "carousel",
+    content_type: 'carousel',
     include: 10,
-  });
+  })
 
   return {
     props: {
       landscapeCarousel: post.items[0].fields,
     },
-  };
+  }
 }
 
 const heroContent = {
-  title: "Grasshoppers Content Studio",
+  title: 'Grasshoppers Content Studio',
   description:
-    "Grasshoppers Academy Content Studio (GACS) is an initiative that allows students to build (partial) dynamic websites for real clients.",
-  cta: { label: "Documentation", href: "documentation" },
-  image: { src: "ontwikkelen-jstack.jpg", alt: "ontwikkelen jstack" },
-};
+    'Grasshoppers Academy Content Studio (GACS) is an initiative that allows students to build (partial) dynamic websites for real clients.',
+  cta: { label: 'Documentation', href: 'documentation' },
+  image: { src: 'ontwikkelen-jstack.jpg', alt: 'ontwikkelen jstack' },
+}
 
 const Home = ({ landscapeCarousel }: { landscapeCarousel: any }) => {
   return (
@@ -38,23 +37,21 @@ const Home = ({ landscapeCarousel }: { landscapeCarousel: any }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-      {/* <Container mb="9"> */}
-        <Hero
-          title={heroContent.title}
-          description={heroContent.description}
-          cta={heroContent.cta}
-          image={heroContent.image}
-        />
-        <Carousel
-          title={landscapeCarousel.title}
-          description={landscapeCarousel.description}
-          images={landscapeCarousel.images}
-        />
-        <ContactForm />
-        <Box my="16" />
-      {/* </Container> */}
+      <Hero
+        title={heroContent.title}
+        description={heroContent.description}
+        cta={heroContent.cta}
+        image={heroContent.image}
+      />
+      <Carousel
+        title={landscapeCarousel.title}
+        description={landscapeCarousel.description}
+        images={landscapeCarousel.images}
+      />
+      <ContactForm />
+      <Box my="16" />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

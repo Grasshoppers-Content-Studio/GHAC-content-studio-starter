@@ -5,7 +5,6 @@ import {
   IconButton,
   Stack,
   Collapse,
-  Icon,
   Link,
   Image,
   useDisclosure,
@@ -13,7 +12,6 @@ import {
 import {
   HamburgerIcon,
   CloseIcon,
-  ChevronDownIcon,
 } from "@chakra-ui/icons";
 
 export default function WithSubnavigation() {

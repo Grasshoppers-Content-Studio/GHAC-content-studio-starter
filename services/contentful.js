@@ -2,8 +2,6 @@ import { createClient } from "contentful";
 
 let client;
 
-// DYNAMIC
-
 export const getClient = async () => {
   if (client && client.geEntry) {
     return client;
